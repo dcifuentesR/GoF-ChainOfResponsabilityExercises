@@ -1,5 +1,7 @@
 package edu.eci.arsw.gof.chainofrep.fileproc;
 
+import java.util.logging.Logger;
+
 public interface DataProcessingChain {
 	
 	/**
@@ -11,7 +13,8 @@ public interface DataProcessingChain {
 	/**
 	 * process the file
 	 * @param extension the extension of the file to be processed
+	 * @throws DataLoadException 
 	 */
-	public void proccessData(String extension);
+	public void proccessData(String extension,Logger LOG) throws DataLoadException;
 
 }
